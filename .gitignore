@@ -1,2 +1,9 @@
+# dependencias de Node
 backend/node_modules/
 client/node_modules/
+
+# build de React
+client/build/
+
+# variables de entorno
+.env
