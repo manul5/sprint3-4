@@ -1,0 +1,187 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  font-family: 'Inter', sans-serif;
+  color: #333;
+}
+
+/* Menu hamburguesa */
+.menu-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+  order: 1;
+}
+
+/* Logo Hermanos Jota */
+header .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  order: 2;
+  flex: 1;
+}
+header .logo img {
+  height: 36px;
+}
+header .logo span {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  display: inline;
+}
+
+header:has(.buscador) .logo span {
+  display: none;
+}
+
+/* Menú navegación */
+nav {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 200px;
+  background: white;
+  padding: 0.5rem 0;
+  border-radius: 12px;
+  order: 3;
+}
+nav.active {
+  display: flex;
+}
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid #eee;
+  transition: color 0.3s;
+}
+nav a:last-child {
+  border-bottom: none;
+}
+nav a:hover {
+  color: #A0522D;
+}
+
+/* Buscador */
+.buscador {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  order: 4;
+}
+.buscador input {
+  flex: 1;
+  min-width: 120px;
+  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 0.3rem 0.8rem;
+  font-weight: 500;
+  background: white;
+  transition: 0.3s;
+}
+.buscador button {
+  background: #A0522D;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Carrito */
+.carrito {
+  order: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.3rem;
+}
+.carrito img {
+  width: 28px;
+  cursor: pointer;
+}
+
+/* --- MEDIA QUERIES --- */
+
+@media (min-width: 768px) {
+  header {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    position: relative;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  header .logo {
+    order: 1;
+    flex: 0 0 auto;
+    justify-content: flex-start;
+    margin-right: 2rem;
+  }
+
+  header .logo span {
+    display: inline !important;
+  }
+
+  nav {
+    display: flex !important;
+    order: 2;
+    position: static;
+    flex-direction: row;
+    background: transparent;
+    width: auto;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  nav a {
+    margin: 0 1rem;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid transparent;
+  }
+  nav a:hover {
+    border-bottom: 2px solid #A0522D;
+  }
+
+  .buscador {
+    order: 3;
+    margin-right: 1rem;
+  }
+  .buscador input {
+    width: 200px;
+  }
+
+  .carrito {
+    order: 4;
+  }
+}
