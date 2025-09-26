@@ -5,7 +5,7 @@ const productos = [
         categoria: "Aparadores",
         descripcion: "Aparador de seis puertas fabricado en nogal sostenible con tiradores metálicos en acabado latón. Su silueta minimalista realza el veteado natural de la madera, creando una pieza que combina funcionalidad y elegancia atemporal para espacios contemporáneos.",
         precio: 150000,
-        imagen: "assets/Aparador%20Uspallata.png",
+        imagen: "assets/aparadorUspallata.png",
         especificaciones: [
             { titulo: "Medidas", valor: "180 × 45 × 75 cm" },
             { titulo: "Materiales", valor: "Nogal macizo FSC®, herrajes de latón" },
@@ -21,7 +21,7 @@ const productos = [
         categoria: "Bibliotecas",
         descripcion: "Sistema modular de estantes abierto que combina estructura de acero Sage Green y repisas en roble claro. Perfecta para colecciones y objetos de diseño, su diseño versátil se adapta a cualquier espacio contemporáneo con elegancia funcional.",
         precio: 110000,
-        imagen: "assets/Biblioteca%20Recoleta.png",
+        imagen: "assets/bibliotecaRecoleta.png",
         especificaciones: [
             { titulo: "Medidas", valor: "100 × 35 × 200 cm" },
             { titulo: "Materiales", valor: "Estructura de acero, estantes de roble" },
@@ -37,7 +37,7 @@ const productos = [
         categoria: "Butacas",
         descripcion: "Butaca tapizada en bouclé Dusty Rose con base de madera de guatambú. El respaldo curvo abraza el cuerpo y ofrece máximo confort, mientras que su diseño orgánico aporta calidez y sofisticación a cualquier ambiente contemporáneo.",
         precio: 95000,
-        imagen: "assets/Butaca%20Mendoza.png",
+        imagen: "assets/butacaMendoza.png",
         especificaciones: [
             { titulo: "Medidas", valor: "80 × 75 × 85 cm" },
             { titulo: "Materiales", valor: "Guatambú macizo, tela bouclé" },
@@ -53,7 +53,7 @@ const productos = [
         categoria: "Sillones",
         descripcion: "Sillón lounge en cuero cognac con base giratoria en acero Burnt Sienna. Inspirado en la estética brasilera moderna de los 60, combina comodidad excepcional con un diseño icónico que trasciende tendencias y épocas.",
         precio: 185000,
-        imagen: "assets/Sillón%20Copacabana.png",
+        imagen: "assets/sillonCopacabana.png",
         especificaciones: [
             { titulo: "Medidas", valor: "90 × 85 × 95 cm" },
             { titulo: "Materiales", valor: "Cuero curtido vegetal, acero pintado" },
@@ -69,7 +69,7 @@ const productos = [
         categoria: "Mesas",
         descripcion: "Mesa de centro con sobre circular de mármol Patagonia y base de tres patas en madera de nogal. Su diseño minimalista se convierte en el punto focal perfecto para cualquier sala de estar contemporánea, combinando la frialdad del mármol con la calidez de la madera.",
         precio: 120000,
-        imagen: "assets/Mesa%20de%20Centro%20Araucaria.png",
+        imagen: "assets/mesaDeCentroAraucaria.png",
         especificaciones: [
             { titulo: "Medidas", valor: "90 × 90 × 45 cm" },
             { titulo: "Materiales", valor: "Sobre de mármol Patagonia, patas de nogal" },
@@ -85,7 +85,7 @@ const productos = [
         categoria: "Mesas",
         descripcion: "Mesa de noche con cajón oculto y repisa inferior en roble certificado FSC®. Su diseño limpio y funcional permite convivir con diferentes estilos de dormitorio, ofreciendo almacenamiento discreto y elegante para objetos personales.",
         precio: 75000,
-        imagen: "assets/Mesa%20de%20Noche%20Aconcagua.png",
+        imagen: "assets/mesaDeNocheAconcagua.png",
         especificaciones: [
             { titulo: "Medidas", valor: "45 × 35 × 60 cm" },
             { titulo: "Materiales", valor: "Roble macizo FSC®, herrajes soft-close" },
@@ -101,7 +101,7 @@ const productos = [
         categoria: "Camas",
         descripcion: "Cama plataforma con cabecero flotante tapizado en lino natural y estructura de madera maciza. Su diseño minimalista y sofisticado crea un ambiente de serenidad y elegancia, perfecto para dormitorios contemporáneos que buscan paz y simplicidad.",
         precio: 200000,
-        imagen: "assets/cama%20neuquen.png",
+        imagen: "assets/camaNeuquen.png",
         especificaciones: [
             { titulo: "Medidas", valor: "160 × 200 × 90 cm" },
             { titulo: "Materiales", valor: "Roble macizo FSC®, tapizado lino" },
@@ -117,7 +117,7 @@ const productos = [
         categoria: "Sofás",
         descripcion: "Sofá de tres cuerpos tapizado en lino Warm Alabaster con patas cónicas de madera. Los cojines combinan espuma de alta resiliencia con plumón reciclado, ofreciendo comodidad duradera y sostenible para el hogar moderno.",
         precio: 210000,
-        imagen: "assets/Sofá%20Patagonia.png",
+        imagen: "assets/sofaPatagonia.png",
         especificaciones: [
             { titulo: "Medidas", valor: "220 × 90 × 80 cm" },
             { titulo: "Estructura", valor: "Madera de eucalipto certificada FSC®" },
@@ -133,7 +133,7 @@ const productos = [
         categoria: "Mesas",
         descripcion: "Mesa extensible de roble macizo con tablero biselado y sistema de apertura suave. Su diseño robusto y elegante se adapta perfectamente a reuniones íntimas o grandes celebraciones familiares, extendiéndose de 6 a 10 comensales.",
         precio: 160000,
-        imagen: "assets/Mesa%20Comedor%20Pampa.png",
+        imagen: "assets/mesaComedorPampa.png",
         especificaciones: [
             { titulo: "Medidas", valor: "160-240 × 90 × 75 cm" },
             { titulo: "Materiales", valor: "Roble macizo FSC®, mecanismo alemán" },
@@ -149,7 +149,7 @@ const productos = [
         categoria: "Sillas",
         descripcion: "Set de cuatro sillas apilables en contrachapado moldeado de nogal y estructura tubular pintada en Sage Green. Su diseño ergonómico y materiales de calidad garantizan comodidad y durabilidad en el uso diario, perfectas para comedores contemporáneos.",
         precio: 95000,
-        imagen: "assets/Sillas%20Córdoba.png",
+        imagen: "assets/sillasCordoba.png",
         especificaciones: [
             { titulo: "Medidas", valor: "45 × 52 × 80 cm (cada una)" },
             { titulo: "Materiales", valor: "Contrachapado nogal, tubo de acero" },
@@ -165,7 +165,7 @@ const productos = [
         categoria: "Escritorios",
         descripcion: "Escritorio compacto con cajón organizado y tapa pasacables integrada en bambú laminado. Ideal para espacios de trabajo en casa, combina funcionalidad moderna con estética minimalista y sostenible, perfecto para el trabajo remoto.",
         precio: 130000,
-        imagen: "assets/Escritorio%20Costa.png",
+        imagen: "assets/escritorioCosta.png",
         especificaciones: [
             { titulo: "Medidas", valor: "120 × 60 × 75 cm" },
             { titulo: "Materiales", valor: "Bambú laminado, herrajes ocultos" },
@@ -181,7 +181,7 @@ const productos = [
         categoria: "Sillas",
         descripcion: "Silla ergonómica regulable en altura con respaldo de malla transpirable y asiento tapizado en tejido reciclado. Diseñada para largas jornadas de trabajo con máximo confort y apoyo lumbar, ideal para oficinas en casa y espacios de coworking.",
         precio: 80000,
-        imagen: "assets/Silla%20de%20Trabajo%20Belgrano.png",
+        imagen: "assets/sillaDeTrabajoBelgrano.png",
         especificaciones: [
             { titulo: "Medidas", valor: "60 × 60 × 90-100 cm" },
             { titulo: "Materiales", valor: "Malla técnica, tejido reciclado" },
