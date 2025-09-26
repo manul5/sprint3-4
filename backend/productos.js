@@ -1,4 +1,4 @@
-export const productos = [
+const productos = [
     {
         id: 1,
         nombre: "Aparador Uspallata",
@@ -192,3 +192,5 @@ export const productos = [
         destacado: false
     }
 ]
+
+module.exports = productos;
