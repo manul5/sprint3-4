@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import logoHermanosJota from "../assets/logoHermanosJota.svg"
 import iconoCarrito from "../assets/carritoCompra.png"
 import "./Header.css";
@@ -23,9 +24,9 @@ export default function Header({mostrarBuscador}){
 
             {/* Opciones del menú */}
             <nav className={menuOpen ? "active" : ""}>
-                <a href="/">Inicio</a>
-                <a href="/productos">Productos</a>
-                <a href="/contacto">Contacto</a>
+                <Link to="/">Inicio</Link>
+                <Link to="/productos">Productos</Link>
+                <Link to="/contacto">Contacto</Link>
             </nav>
 
             {/* Buscador */}

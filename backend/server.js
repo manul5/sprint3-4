@@ -1,5 +1,9 @@
 const express = require("express");
+const cors = require("cors");
 const app = express();
+
+// Habilitar CORS
+app.use(cors());
 
 // Request logging middleware
 app.use((req, res, next) => {

@@ -1,0 +1,98 @@
+/* =========================
+   SECCIÓN DESTACADOS
+   ========================= */
+.destacados-section {
+  background: #F5E6D3;
+  padding: 1rem 0;
+}
+
+.destacados-section h2 {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  color: #A0522D;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.destacados-section p {
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+/* =========================
+   CARRUSEL
+   ========================= */
+.carrusel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 0 1rem; /* espacio lateral */
+}
+
+.carrusel {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding-bottom: 1rem;
+}
+
+.carrusel::-webkit-scrollbar {
+  display: none; /* Oculta scrollbar en Chrome/Safari */
+}
+
+/* BOTONES DEL CARRUSEL */
+.carrusel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #A0522D;
+  color: #fff;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  transition: background 0.3s;
+}
+
+.carrusel-btn:hover {
+  background: #9CAF88;
+}
+
+.carrusel-btn.left { left: 0.5rem; }
+.carrusel-btn.right { right: 0.5rem; }
+
+.carrusel-btn i {
+  font-size: 1rem;
+}
+
+/* TARJETAS DENTRO DEL CARRUSEL */
+.carrusel .card.small {
+  flex: 0 0 auto;
+  width: 160px; /* mobile first */
+  scroll-snap-align: start;
+}
+
+/* Responsive tablets */
+@media (min-width: 600px) {
+  .carrusel .card.small {
+    width: 200px;
+  }
+}
+
+/* Responsive desktop */
+@media (min-width: 900px) {
+  .carrusel .card.small {
+    width: 220px;
+  }
+}
