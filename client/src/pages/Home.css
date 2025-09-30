@@ -1,98 +1,209 @@
-/* =========================
-   SECCIÓN DESTACADOS
-   ========================= */
-.destacados-section {
-  background: #F5E6D3;
-  padding: 1rem 0;
+/* pages/Home.css */
+.home {
+  background-color: #F5E6D3;
 }
 
-.destacados-section h2 {
+/* HERO FULLSCREEN */
+.hero-full {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-full img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(60%);
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
+  color: #F5E6D3;
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.hero-overlay h1 {
   font-family: 'Playfair Display', serif;
-  color: #A0522D;
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
-.destacados-section p {
-  text-align: center;
+.hero-overlay p {
   font-family: 'Inter', sans-serif;
-  color: #333;
-  margin-bottom: 1rem;
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  margin-bottom: 2rem;
+  color: rgba(245, 230, 211, 0.9);
+}
+
+.hero-overlay .btn {
+  background: #A0522D;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
   font-size: 1rem;
 }
 
-/* =========================
-   CARRUSEL
-   ========================= */
+.hero-overlay .btn:hover {
+  background: #9CAF88;
+}
+
+/* DESTACADOS CON CARRUSEL */
+.destacados {
+  background: #F5E6D3;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.destacados h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  color: #A0522D;
+  margin-bottom: 1rem;
+}
+
+.destacados p {
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  color: #555;
+  font-size: 1.1rem;
+}
+
 .carrusel-wrapper {
   position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
-  overflow: hidden;
-  padding: 0 1rem; /* espacio lateral */
 }
 
 .carrusel {
   display: flex;
   gap: 1rem;
   overflow-x: auto;
-  scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  padding-bottom: 1rem;
+  padding: 1rem 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .carrusel::-webkit-scrollbar {
-  display: none; /* Oculta scrollbar en Chrome/Safari */
+  display: none;
 }
 
-/* BOTONES DEL CARRUSEL */
+.carrusel-item {
+  flex: 0 0 280px;
+}
+
+.carrusel-item .card {
+  margin: 0;
+}
+
 .carrusel-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: #A0522D;
+  background: rgba(165, 82, 45, 0.8);
   color: #fff;
   border: none;
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-  z-index: 2;
+  z-index: 10;
   transition: background 0.3s;
 }
 
 .carrusel-btn:hover {
-  background: #9CAF88;
+  background: #A0522D;
 }
 
-.carrusel-btn.left { left: 0.5rem; }
-.carrusel-btn.right { right: 0.5rem; }
+.carrusel-btn.left {
+  left: -20px;
+}
 
-.carrusel-btn i {
+.carrusel-btn.right {
+  right: -20px;
+}
+
+/* POR QUÉ NOSOTROS */
+.porque {
+  background-color: #F5E6D3;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.porque .intro {
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  color: #555;
   font-size: 1rem;
+  line-height: 1.6;
 }
 
-/* TARJETAS DENTRO DEL CARRUSEL */
-.carrusel .card.small {
-  flex: 0 0 auto;
-  width: 160px; /* mobile first */
-  scroll-snap-align: start;
+.porque-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
 }
 
-/* Responsive tablets */
-@media (min-width: 600px) {
-  .carrusel .card.small {
-    width: 200px;
+.porque-item {
+  padding: 0 1rem;
+  border-right: 2px solid #A0522D;
+}
+
+.porque-item:last-child {
+  border-right: none;
+}
+
+.porque-item h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  color: #A0522D;
+  margin-bottom: 0.5rem;
+}
+
+.porque-item p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .carrusel-item {
+    flex: 0 0 220px;
   }
-}
-
-/* Responsive desktop */
-@media (min-width: 900px) {
-  .carrusel .card.small {
-    width: 220px;
+  
+  .carrusel-btn {
+    display: none;
+  }
+  
+  .porque-item {
+    border-right: none;
+    border-bottom: 2px solid #A0522D;
+    padding-bottom: 1rem;
+  }
+  
+  .porque-item:last-child {
+    border-bottom: none;
   }
 }

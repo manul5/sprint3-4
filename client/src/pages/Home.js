@@ -1,60 +1,83 @@
-import Header from "../components/Header";
-import { useEffect, useState } from "react";
-import TarjetaProducto from "../components/TarjetaProducto";
-import "./Home.css"
+// Home.js
+import React, { useRef } from 'react';
+import ProductCard from '../components/ProductCard';
+import './Home.css';
 
-export default function Home(){
-    const [productos, setProductos] = useState([]);
-    const [loading, setLoading] = useState(true);
+const Home = ({ productosDestacados, cargando, onProductoClick, onVerCatalogo }) => {
+  const carruselRef = useRef(null);
 
-    // Cargar productos desde el backend
-    useEffect(() => {
-        const fetchProductos = async () => {
-        try {
-            const res = await fetch("http://localhost:3000/api/productos");
-            if (!res.ok) throw new Error("Error al cargar productos");
-                const data = await res.json();
-                setProductos(data);
-        } catch (error) {
-            console.error("Error cargando productos:", error);
-        } finally {
-            setLoading(false);
-        }
-    };
-        fetchProductos();
-    },[]);
+  const scrollCarrusel = (direction) => {
+    if (carruselRef.current) {
+      const scrollAmount = 300;
+      carruselRef.current.scrollLeft += direction * scrollAmount;
+    }
+  };
 
-    // Filtrar los destacados
-    const destacados = productos.filter(p => p.destacado);
+  if (cargando) {
+    return <div className="cargando">Cargando...</div>;
+  }
 
-    if (loading) return <p>Cargando productos...</p>;
+  return (
+    <div className="home">
+      
+      <section className="hero-full">
+        <img src="/assets/banner.png" alt="Banner Hermanos Jota" />
+        <div className="hero-overlay">
+          <h1>Redescubriendo el arte de vivir</h1>
+          <p>Muebles artesanales diseñados para perdurar, con materiales nobles y procesos sustentables.</p>
+          <button className="btn" onClick={onVerCatalogo}>Ver Colección</button>
+        </div>
+      </section>
 
-    return(
-        <>
-            <Header mostrarBuscador={false}/>
-
-            <h1>Página de inicio</h1>
+      
+      {productosDestacados.length > 0 && (
+        <section className="destacados">
+          <h2>Novedades y Promociones</h2>
+          <p>Descubre nuestra selección de muebles más populares</p>
+          
+          <div className="carrusel-wrapper">
+            <button className="carrusel-btn left" onClick={() => scrollCarrusel(-1)}>
+              ‹
+            </button>
             
-            <div className="carrusel-wrapper">
-                <button className="carrusel-btn left">
-                    <i className="fa-solid fa-chevron-left"></i>
-                </button>
-
-                <div className="carrusel">
-                    {destacados.map(prod => (
-                        <TarjetaProducto
-                            key={prod.id}
-                            producto={prod}
-                            claseExtra="small"
-                            mostrarEtiquetaDestacado={true}
-                        />
-                    ))}
+            <div className="carrusel" ref={carruselRef}>
+              {productosDestacados.map(producto => (
+                <div key={producto.id} className="carrusel-item">
+                  <ProductCard 
+                    producto={producto}
+                    onProductoClick={onProductoClick}
+                  />
                 </div>
-
-                <button className="carrusel-btn right">
-                    <i className="fa-solid fa-chevron-right"></i>
-                </button>
+              ))}
             </div>
-        </>
-    )
-}
+            
+            <button className="carrusel-btn right" onClick={() => scrollCarrusel(1)}>
+              ›
+            </button>
+          </div>
+        </section>
+      )}
+
+      
+      <section className="porque">
+        <h2>¿Por qué elegirnos?</h2>
+        <div className="porque-grid">
+          <div className="porque-item">
+            <h3>Diseño Atemporal</h3>
+            <p>Minimalismo cálido que combina estética y funcionalidad</p>
+          </div>
+          <div className="porque-item">
+            <h3>Compromiso Sustentable</h3>
+            <p>Materiales certificados y procesos responsables</p>
+          </div>
+          <div className="porque-item">
+            <h3>Hecho en Comunidad</h3>
+            <p>Trabajamos en cooperación con artesanos locales</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default Home;

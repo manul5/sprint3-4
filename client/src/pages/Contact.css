@@ -1,0 +1,161 @@
+/* Contact.css - TUS ESTILOS EXACTOS */
+.contact-page {
+  background: white;
+}
+
+#contacto1 {
+  background-color: #F5E6D3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 5rem;
+}
+
+#contactanos {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: xx-large;
+  font-weight: 700;
+  padding: 2rem;
+}
+
+#contacto2 {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  align-content: center;
+  padding: 5rem;
+  gap: 2rem;
+  background-color: white;
+}
+
+#seccion {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+}
+
+#seccion > * {
+  flex: 1;
+}
+
+#info {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: x-large;
+  font-weight: 700;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#item {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.iconos {
+  height: 54px;
+  width: 54px;
+  background-color: #F7F5F3;
+  border-radius: 30%;
+  padding: 10px;
+}
+
+#texto {
+  gap: 2rem;
+}
+
+#texto-titulo {
+  font-weight: 600;
+}
+
+#info2 {
+  font-size: medium;
+}
+
+#form-contacto {
+  padding: 2rem;
+  background-color: #F5E6D3;
+  margin: 5rem;
+  border-radius: 1.2rem;
+  border: 1px solid #d1d5db;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label-form-contacto {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
+               "Helvetica Neue", Arial, sans-serif;
+  font-weight: 500;
+  font-size: medium;
+}
+
+.inp-form-contacto {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 16px;
+  background: inherit;
+  color: black;
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
+       "Helvetica Neue", Arial, sans-serif;
+  font-weight: 500;
+  font-size: small;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.inp-form-contacto:focus {
+  border-color: #87A96B;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 0 3px rgba(135, 169, 107, 0.15);
+}
+
+#btn-enviar {
+  background-color: #87A96B;
+  border: none;
+  padding: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
+       "Helvetica Neue", Arial, sans-serif;
+  font-weight: 500;
+  font-size: medium;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+}
+
+#btn-enviar:hover {
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+em {
+  color: #87A96B;
+}
+
+@media (max-width: 768px) {
+  #seccion {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: stretch;
+  }
+
+  #form-contacto {
+    margin-top: 0;
+  }
+}
