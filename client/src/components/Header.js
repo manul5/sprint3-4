@@ -1,3 +1,4 @@
+// Header.js 
 import { useState } from "react";
 import "./Header.css";
 
@@ -6,7 +7,8 @@ export default function Header({
   onMostrarHome, 
   onMostrarCatalogo, 
   onMostrarContacto,
-  onBuscar
+  onBuscar,
+  onMostrarCarrito  
 }){
     const [menuOpen, setMenuOpen] = useState(false);
     const [busquedaOpen, setBusquedaOpen] = useState(false);
@@ -32,23 +34,19 @@ export default function Header({
 
     return(
         <header>
-            {/*Menú hamburguesa */}
             <button className="menu-toggle" onClick={() => { setMenuOpen(!menuOpen); setBusquedaOpen(false); }}>
                 ☰
             </button>
 
-            {/* Logo */}
             <div className="logo" onClick={() => handleNavClick(onMostrarHome)}>
                 <img src="/assets/logoHermanosJota.svg" alt="Hermanos Jota" />
                 <span>Hermanos Jota</span>
             </div>
 
-            {/* Lupita responiva*/}
             <button className="lupita-mobile" onClick={toggleBusqueda}>
                 <img src="/assets/lupa.webp" alt="Buscar" />
             </button>
 
-            {/* Barra de búsqueda responsiva */}
             <div className={`buscador-mobile ${busquedaOpen ? 'active' : ''}`}>
                 <input 
                     type="text" 
@@ -61,14 +59,12 @@ export default function Header({
                 </button>
             </div>
 
-            {/* Navegación */}
             <nav className={menuOpen ? 'active' : ''}>
                 <a href="#!" onClick={(e) => { e.preventDefault(); handleNavClick(onMostrarHome); }}>Inicio</a>
                 <a href="#!" onClick={(e) => { e.preventDefault(); handleNavClick(onMostrarCatalogo); }}>Productos</a>
                 <a href="#!" onClick={(e) => { e.preventDefault(); handleNavClick(onMostrarContacto); }}>Contacto</a>
             </nav>
 
-            {/* Búsqueda*/}
             <div className="buscador-container">
                 <input 
                     type="text" 
@@ -82,8 +78,8 @@ export default function Header({
                 </button>
             </div>
 
-            
-            <div className="carrito">
+            {/* carrito */}
+            <div className="carrito" onClick={onMostrarCarrito} style={{position: 'relative', cursor: 'pointer'}}>
                 <img src="/assets/carritoCompra.png" alt="Carrito de compras" />
                 {cantidadCarrito > 0 && (
                     <span className="contador-carrito">

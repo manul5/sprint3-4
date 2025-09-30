@@ -1,4 +1,4 @@
-// App.js
+// App.js COMPLETO
 import './App.css';
 import { useState, useEffect } from 'react';
 import Header from './components/Header';
@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import ProductList from './components/ProductList';
 import ProductDetail from './components/ProductDetail';
 import Contact from './pages/Contact';
+import Carrito from './components/Carrito';
 
 function App() {
   const [vistaActual, setVistaActual] = useState('home');
@@ -38,7 +39,6 @@ function App() {
   const handleBuscar = (termino) => {
     setTerminoBusqueda(termino);
     
-    //muestra todos
     if (!termino.trim()) {
       setProductosFiltrados(productos);
       return;
@@ -83,10 +83,23 @@ function App() {
     setVistaActual('detalle');
   };
 
- //carrito
+  //carrito
   const agregarAlCarrito = (producto) => {
-    setCarrito([...carrito, producto]);
-    alert(`¡${producto.nombre} agregado al carrito! 🛒`);
+    setCarrito([...carrito, { ...producto, carritoId: Date.now() }]);
+    alert(`¡${producto.nombre} agregado al carrito!`);
+  };
+
+  const eliminarDelCarrito = (carritoId) => {
+    setCarrito(carrito.filter(item => item.carritoId !== carritoId));
+  };
+
+  const vaciarCarrito = () => {
+    setCarrito([]);
+    alert('Carrito vaciado');
+  };
+
+  const mostrarCarrito = () => {
+    setVistaActual('carrito');
   };
 
   return (
@@ -96,7 +109,8 @@ function App() {
         onMostrarHome={mostrarHome}
         onMostrarCatalogo={mostrarCatalogo}
         onMostrarContacto={mostrarContacto}
-        onBuscar={handleBuscar}  // ← Nueva prop
+        onBuscar={handleBuscar}
+        onMostrarCarrito={mostrarCarrito} // ← PROP AGREGADA
       />
       
       <main>
@@ -123,6 +137,17 @@ function App() {
             producto={productoSeleccionado}
             onVolver={mostrarCatalogo}
             onAgregarCarrito={agregarAlCarrito}
+          />
+        )}
+        
+        {/* VISTA DEL CARRITO AGREGADA */}
+        {vistaActual === 'carrito' && (
+          <Carrito 
+            carrito={carrito}
+            onEliminarItem={eliminarDelCarrito}
+            onVaciarCarrito={vaciarCarrito}
+            onSeguirComprando={mostrarCatalogo}
+            onVolver={mostrarHome}
           />
         )}
         
