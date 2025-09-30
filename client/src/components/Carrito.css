@@ -19,7 +19,7 @@
 }
 
 .btn-volver {
-  background: #6c757d;
+  background: #D4A437;
   color: white;
   border: none;
   padding: 0.5rem 1rem;
@@ -29,7 +29,7 @@
 }
 
 .btn-volver:hover {
-  background: #5a6268;
+  background: #765c20;
 }
 
 .carrito-vacio {
@@ -105,9 +105,8 @@
   margin: 0;
 }
 
-/* ESTILOS MEJORADOS PARA EL BOTÓN ELIMINAR */
 .btn-eliminar {
-  background: #e74c3c;
+  background: #D4A437;
   border: none;
   width: 45px;
   height: 45px;
@@ -121,7 +120,7 @@
 }
 
 .btn-eliminar:hover {
-  background: #c0392b;
+  background: #765c20;
   transform: scale(1.1);
 }
 
@@ -177,7 +176,7 @@
 }
 
 .btn-vaciar {
-  background: #e74c3c;
+  background: #D4A437;
   color: white;
   border: none;
   padding: 1rem;
@@ -188,7 +187,7 @@
 }
 
 .btn-vaciar:hover {
-  background: #c0392b;
+  background: #765c20;
 }
 
 .btn-comprar {

@@ -50,10 +50,15 @@ header {
   border: none;
   cursor: pointer;
   padding: 0.5rem;
+  border-radius:50%;
+   background: #A0522D;
+   
+
 }
 .lupita-mobile img {
   width: 24px;
   height: 24px;
+  filter: brightness(0) invert(1);
 }
 
 .buscador-mobile {
@@ -147,7 +152,7 @@ nav a:hover {
   position: absolute;
   top: -5px;
   right: -5px;
-  background: #e74c3c;
+  background: #A0522D;
   color: white;
   border-radius: 50%;
   width: 18px;

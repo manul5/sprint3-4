@@ -45,6 +45,7 @@ export default function Header({
 
             <button className="lupita-mobile" onClick={toggleBusqueda}>
                 <img src="/assets/lupa.webp" alt="Buscar" />
+                
             </button>
 
             <div className={`buscador-mobile ${busquedaOpen ? 'active' : ''}`}>

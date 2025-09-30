@@ -34,7 +34,7 @@ const ProductDetail = ({ producto, onVolver, onAgregarCarrito }) => {
           </div>
 
           <button id="btn-carrito" onClick={() => onAgregarCarrito(producto)}>
-            Añadir al Carnito
+            Añadir al Carrito
           </button>
         </section>
       </article>

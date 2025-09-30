@@ -40,10 +40,11 @@
   color: #333;
 }
 
-.categoria {
+.categoria  {
   font-size: 0.9rem;
   color: #87A96B;
-  font-weight: bold;
+  font-style: italic;
+  font-family: 'Inter', sans-serif;
   text-transform: uppercase;
 }
 
