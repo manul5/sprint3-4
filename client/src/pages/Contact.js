@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Contact.css';
 
 const Contact = ({ onVolver }) => {
-  // FORMULARIO
+  
   const [formData, setFormData] = useState({
     nombre: '',
     email: '',

@@ -1,4 +1,4 @@
-// App.js 
+
 import './App.css';
 import { useState, useEffect } from 'react';
 import Header from './components/Header';
@@ -18,7 +18,7 @@ function App() {
   const [cargando, setCargando] = useState(true);
   const [terminoBusqueda, setTerminoBusqueda] = useState('');
 
-  // cargar productos
+
   useEffect(() => {
     const fetchProductos = async () => {
       try {
@@ -35,7 +35,7 @@ function App() {
     fetchProductos();
   }, []);
 
-  //buscar funcional
+
   const handleBuscar = (termino) => {
     setTerminoBusqueda(termino);
     
@@ -83,7 +83,7 @@ function App() {
     setVistaActual('detalle');
   };
 
-  //carrito
+
   const agregarAlCarrito = (producto) => {
     setCarrito([...carrito, { ...producto, carritoId: Date.now() }]);
     alert(`¡${producto.nombre} agregado al carrito!`);
@@ -140,7 +140,7 @@ function App() {
           />
         )}
         
-        {/* vista del carrito */}
+        
         {vistaActual === 'carrito' && (
           <Carrito 
             carrito={carrito}

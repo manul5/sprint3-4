@@ -1,4 +1,4 @@
-// Home.js
+
 import React, { useRef } from 'react';
 import ProductCard from '../components/ProductCard';
 import './Home.css';
@@ -7,11 +7,25 @@ const Home = ({ productosDestacados, cargando, onProductoClick, onVerCatalogo })
   const carruselRef = useRef(null);
 
   const scrollCarrusel = (direction) => {
-    if (carruselRef.current) {
-      const scrollAmount = 300;
-      carruselRef.current.scrollLeft += direction * scrollAmount;
+  if (carruselRef.current) {
+    const scrollAmount = 300;
+    const carrusel = carruselRef.current;
+
+    if (direction === 1) {
+      if (carrusel.scrollLeft + carrusel.offsetWidth >= carrusel.scrollWidth) {
+        carrusel.scrollLeft = 0;
+      } else {
+        carrusel.scrollLeft += scrollAmount;
+      }
+    } else {
+      if (carrusel.scrollLeft <= 0) {
+        carrusel.scrollLeft = carrusel.scrollWidth;
+      } else {
+        carrusel.scrollLeft -= scrollAmount;
+      }
     }
-  };
+  }
+};
 
   if (cargando) {
     return <div className="cargando">Cargando...</div>;

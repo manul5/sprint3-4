@@ -1,9 +1,9 @@
-/* pages/Home.css */
+
 .home {
   background-color: #F5E6D3;
 }
 
-/* HERO FULLSCREEN */
+
 .hero-full {
   position: relative;
   width: 100%;
@@ -61,7 +61,7 @@
   background: #9CAF88;
 }
 
-/* DESTACADOS CON CARRUSEL */
+
 .destacados {
   background: #F5E6D3;
   padding: 3rem 2rem;
@@ -142,7 +142,7 @@
   right: -20px;
 }
 
-/* POR QUÉ NOSOTROS */
+
 .porque {
   background-color: #F5E6D3;
   padding: 3rem 2rem;
@@ -187,7 +187,7 @@
   line-height: 1.5;
 }
 
-/* RESPONSIVE */
+
 @media (max-width: 768px) {
   .carrusel-item {
     flex: 0 0 220px;
