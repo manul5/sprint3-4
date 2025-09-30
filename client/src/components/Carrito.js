@@ -1,4 +1,4 @@
-// components/Carrito.js
+//Carrito.js
 import React from 'react';
 import './Carrito.css';
 

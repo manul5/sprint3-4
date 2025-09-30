@@ -1,4 +1,4 @@
-// App.js COMPLETO
+// App.js 
 import './App.css';
 import { useState, useEffect } from 'react';
 import Header from './components/Header';
@@ -110,7 +110,7 @@ function App() {
         onMostrarCatalogo={mostrarCatalogo}
         onMostrarContacto={mostrarContacto}
         onBuscar={handleBuscar}
-        onMostrarCarrito={mostrarCarrito} // ← PROP AGREGADA
+        onMostrarCarrito={mostrarCarrito} 
       />
       
       <main>
@@ -140,7 +140,7 @@ function App() {
           />
         )}
         
-        {/* VISTA DEL CARRITO AGREGADA */}
+        {/* vista del carrito */}
         {vistaActual === 'carrito' && (
           <Carrito 
             carrito={carrito}
