@@ -1,8 +1,7 @@
 
-import React from 'react';
 import './ProductDetail.css';
 
-const ProductDetail = ({ producto, onVolver, onAgregarCarrito }) => {
+export default function ProductDetail({ producto, onVolver, onAgregarCarrito }){
   const imageUrl = `/assets/${producto.imagen.replace('assets/', '')}`;
 
   return (
@@ -41,5 +40,3 @@ const ProductDetail = ({ producto, onVolver, onAgregarCarrito }) => {
     </div>
   );
 };
-
-export default ProductDetail;
