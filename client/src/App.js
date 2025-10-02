@@ -7,7 +7,7 @@ import Home from './pages/Home';
 import ProductList from './components/ProductList';
 import ProductDetail from './components/ProductDetail';
 import Contact from './pages/Contact';
-import Carrito from './components/Carrito';
+import Carrito from './pages/Carrito';
 
 function App() {
   const [vistaActual, setVistaActual] = useState('home');
