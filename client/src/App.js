@@ -1,7 +1,6 @@
 
 import './App.css';
 import { useState, useEffect } from 'react';
-import Header from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import ProductList from './components/ProductList';
@@ -112,6 +111,7 @@ function App() {
         onMostrarContacto={mostrarContacto}
         onBuscar={handleBuscar}
         onMostrarCarrito={mostrarCarrito} 
+        vistaActual={vistaActual}
       />
       
       <main>

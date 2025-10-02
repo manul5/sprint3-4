@@ -1,6 +1,5 @@
-
 import { useState } from "react";
-import "./Navbar.css"; 
+import "./Navbar.css";
 
 export default function Navbar({ 
   cantidadCarrito, 
@@ -8,7 +7,8 @@ export default function Navbar({
   onMostrarCatalogo, 
   onMostrarContacto,
   onBuscar,
-  onMostrarCarrito  
+  onMostrarCarrito,
+  vistaActual 
 }){
     const [menuOpen, setMenuOpen] = useState(false);
     const [busquedaOpen, setBusquedaOpen] = useState(false);
@@ -32,8 +32,10 @@ export default function Navbar({
         setMenuOpen(false);
     };
 
+    const mostrarBusqueda = vistaActual === 'catalogo';
+
     return(
-        <header> 
+        <header>
             <button className="menu-toggle" onClick={() => { setMenuOpen(!menuOpen); setBusquedaOpen(false); }}>
                 ☰
             </button>
@@ -43,11 +45,13 @@ export default function Navbar({
                 <span>Hermanos Jota</span>
             </div>
 
-            <button className="lupita-mobile" onClick={toggleBusqueda}>
-                <img src="/assets/lupa.webp" alt="Buscar" />
-                
-            </button>
+            {mostrarBusqueda && (
+                <button className="lupita-mobile" onClick={toggleBusqueda}>
+                    <img src="/assets/lupa.webp" alt="Buscar" />
+                </button>
+            )}
 
+            {/* buscador mobile */}
             <div className={`buscador-mobile ${busquedaOpen ? 'active' : ''}`}>
                 <input 
                     type="text" 
@@ -66,18 +70,21 @@ export default function Navbar({
                 <a href="#!" onClick={(e) => { e.preventDefault(); handleNavClick(onMostrarContacto); }}>Contacto</a>
             </nav>
 
-            <div className="buscador-container">
-                <input 
-                    type="text" 
-                    placeholder="Buscar productos..." 
-                    value={busqueda}
-                    onChange={(e) => setBusqueda(e.target.value)}
-                    className="buscador-input"
-                />
-                <button onClick={handleBuscar} className="buscador-btn">
-                    <img src="/assets/lupa.webp" alt="Buscar" />
-                </button>
-            </div>
+            {/* solo mostrar en catalogo */}
+            {mostrarBusqueda && (
+                <div className="buscador-container">
+                    <input 
+                        type="text" 
+                        placeholder="Buscar productos..." 
+                        value={busqueda}
+                        onChange={(e) => setBusqueda(e.target.value)}
+                        className="buscador-input"
+                    />
+                    <button onClick={handleBuscar} className="buscador-btn">
+                        <img src="/assets/lupa.webp" alt="Buscar" />
+                    </button>
+                </div>
+            )}
 
             {/* carrito */}
             <div className="carrito" onClick={onMostrarCarrito} style={{position: 'relative', cursor: 'pointer'}}>

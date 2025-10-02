@@ -282,4 +282,12 @@ nav a:hover {
     width: 20px;
     height: 20px;
   }
+
+header:has(.buscador-container:empty) .carrito {
+    margin-left: auto;
+}
+header:has(.lupita-mobile:empty) .logo {
+    justify-content: center;
+    margin-right: 0;
+}
 }
