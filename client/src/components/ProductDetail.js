@@ -1,4 +1,3 @@
-
 import './ProductDetail.css';
 
 export default function ProductDetail({ producto, onVolver, onAgregarCarrito }){
@@ -7,7 +6,7 @@ export default function ProductDetail({ producto, onVolver, onAgregarCarrito }){
   return (
     <div className="product-detail">
       <nav className="breadcrumb">
-        <a href="#!" onClick={onVolver}>Inicio</a> /
+        <a href="/">Inicio</a> /
         <a href="#!" onClick={onVolver}>Productos</a> /
         <span>{producto.nombre}</span>
       </nav>
