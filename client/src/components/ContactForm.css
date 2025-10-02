@@ -69,6 +69,25 @@
   box-shadow: 0 5px 12px rgba(0,0,0,0.1);
 }
 
+.error {
+  color: #C47A6D; 
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.alerta-exito {
+  background: #d4edda;
+  color: #155724;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  border: 1px solid #c3e6cb;
+  text-align: center;
+}
+
 /* Tablet */
 @media (min-width: 768px) {
   #form-contacto {
