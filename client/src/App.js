@@ -1,13 +1,14 @@
 
 import './App.css';
 import { useState, useEffect } from 'react';
-import Header from './components/Header';
+import Header from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import ProductList from './components/ProductList';
 import ProductDetail from './components/ProductDetail';
 import Contact from './pages/Contact';
 import Carrito from './pages/Carrito';
+import Navbar from './components/Navbar';
 
 function App() {
   const [vistaActual, setVistaActual] = useState('home');
@@ -104,7 +105,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header 
+      <Navbar 
         cantidadCarrito={carrito.length}
         onMostrarHome={mostrarHome}
         onMostrarCatalogo={mostrarCatalogo}

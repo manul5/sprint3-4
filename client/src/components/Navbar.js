@@ -1,8 +1,8 @@
 
 import { useState } from "react";
-import "./Header.css";
+import "./Navbar.css"; 
 
-export default function Header({ 
+export default function Navbar({ 
   cantidadCarrito, 
   onMostrarHome, 
   onMostrarCatalogo, 
@@ -33,7 +33,7 @@ export default function Header({
     };
 
     return(
-        <header>
+        <header> 
             <button className="menu-toggle" onClick={() => { setMenuOpen(!menuOpen); setBusquedaOpen(false); }}>
                 ☰
             </button>
