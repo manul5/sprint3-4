@@ -3,13 +3,13 @@
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   color: #333;
   line-height: 1.6;
-  padding: 1rem;
+  padding: 0.5rem 1rem 1rem;
 }
 
 #contacto1 {
   background-color: #F5E6D3; 
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 1.5rem 1rem;
   border-radius: 0.8rem;
 }
 
@@ -22,16 +22,15 @@
   margin-bottom: 1rem;
 }
 
-#p-contacto1 {
-  font-size: 0.95rem;
-  color: #444;
-}
-
 #seccion {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   margin-top: 2rem;
+}
+
+#contacto-form {
+  flex: 1;
 }
 
 #contacto2 {
@@ -41,12 +40,16 @@
   border: 1px solid #eee;
 }
 
+#contacto2 > p {
+  margin-bottom: 2.5rem;
+}
+
 #info {
   font-family: "Playfair Display", Georgia, serif;
   font-size: 1.4rem;
   font-weight: 700;
   color: #A0522D;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 #container {
@@ -84,11 +87,17 @@
   line-height: 1.5;
 }
 
+#p-contacto1 {
+  font-size: 0.95rem;
+  color: #444;
+}
+
 /* Tablet */
 @media (min-width: 768px) {
   #seccion {
     flex-direction: row;
     gap: 3rem;
+    align-items: flex-start;
   }
 
   #contacto2 {
@@ -96,9 +105,14 @@
     padding: 3rem;
   }
 
+  #contacto-form {
+    flex: 1;
+  }
+
   #info {
     font-size: 1.6rem;
   }
+  
   #item {
     flex-direction: row;
     align-items: flex-start;
@@ -110,17 +124,16 @@
 /* Desktop */
 @media (min-width: 1024px) {
   .contact-page {
-    padding: 2rem 4rem;
+    padding: 1rem 4rem 2rem;
   }
 
   #contacto1 {
-    padding: 4rem 2rem;
+    padding: 2.5rem 2rem;
   }
 
   #contactanos {
     font-size: 2rem;
   }
-
   #info {
     font-size: 1.8rem;
   }

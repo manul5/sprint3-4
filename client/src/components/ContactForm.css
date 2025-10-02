@@ -21,7 +21,17 @@
 .campo {
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  margin-bottom: 1.2rem;
+  gap: 0.5rem;
+}
+
+.campo .label-form-contacto {
+  text-align: left;
+  align-self: flex-start;
+}
+
+.campo .inp-form-contacto {
+  width: 100%;
 }
 
 .label-form-contacto {
@@ -29,6 +39,11 @@
   font-weight: 500;
   font-size: 0.95rem;
   color: #333;
+}
+
+.label-form-contacto em {
+  color: #87A96B;
+  font-style: normal;
 }
 
 .inp-form-contacto {
@@ -55,7 +70,6 @@
   padding: 12px;
   font-family: "Inter", sans-serif;
   font-weight: 600;
-  font-size: 0.95rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   border-radius: 8px;
@@ -91,15 +105,16 @@
 /* Tablet */
 @media (min-width: 768px) {
   #form-contacto {
-    margin: 3rem auto;
+    margin: 0;
     padding: 3rem;
-    max-width: 600px;
+    max-width: none;
   }
 }
+
 
 /* Desktop */
 @media (min-width: 1024px) {
   #form-contacto {
-    max-width: 700px;
+    max-width: none;
   }
 }

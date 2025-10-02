@@ -4,7 +4,6 @@ import ContactForm from '../components/ContactForm';
 const Contact = () => {
   return (
     <div className="contact-page">
-
       <div id="contacto1">
         <div id="contactanos">Contáctanos</div>
         <p id="p-contacto1">¿Tienes alguna pregunta sobre nuestros muebles? <br></br> Estamos aquí para ayudarte. Contáctanos y te responderemos a la brevedad.</p>
@@ -59,8 +58,11 @@ const Contact = () => {
 
           </div>
         </div>
+
+        <div id="contacto-form">
+          <ContactForm/>
+        </div>
       </div>
-      <ContactForm/>
     </div>
   );
 };
