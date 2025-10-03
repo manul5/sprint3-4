@@ -39,21 +39,16 @@ function App() {
   const handleBuscar = (termino) => {
     setTerminoBusqueda(termino);
     
-    if (!termino.trim()) {
-      setProductosFiltrados(productos);
-      return;
-    }
-
+    if (termino.trim().length >= 3) {
     const filtrados = productos.filter(producto =>
-      producto.nombre.toLowerCase().includes(termino.toLowerCase()) ||
-      producto.categoria.toLowerCase().includes(termino.toLowerCase()) ||
-      producto.descripcion.toLowerCase().includes(termino.toLowerCase())
+      producto.nombre.toLowerCase().includes(termino.toLowerCase())
     );
-    
+
     setProductosFiltrados(filtrados);
     
-    if (termino.trim() && vistaActual === 'home') {
-      setVistaActual('catalogo');
+    if (vistaActual === 'home') setVistaActual('catalogo');
+    } else{
+      setProductosFiltrados(productos);
     }
   };
 
