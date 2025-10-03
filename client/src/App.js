@@ -66,11 +66,17 @@ function App() {
     setProductosFiltrados(productos);
   };
 
-  const mostrarCatalogo = () => {
+  const mostrarCatalogo = async() => {
     setVistaActual('catalogo');
     setProductoSeleccionado(null);
     setTerminoBusqueda('');
-    setProductosFiltrados(productos); 
+
+    setCargando(true);
+
+    setTimeout(() => {
+      setProductosFiltrados(productos); 
+      setCargando(false);
+    }, 600);
   };
 
   const mostrarContacto = () => {
@@ -79,8 +85,13 @@ function App() {
   };
 
   const mostrarDetalle = (producto) => {
-    setProductoSeleccionado(producto);
-    setVistaActual('detalle');
+    setCargando(true);
+
+    setTimeout(() => {
+      setProductoSeleccionado(producto);
+      setVistaActual('detalle');
+      setCargando(false);
+    }, 600);
   };
 
 
