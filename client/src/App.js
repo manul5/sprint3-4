@@ -78,12 +78,18 @@ function App() {
     }, 600);
   };
 
-  const mostrarContacto = () => {
+  const mostrarContacto = async() => {
+    setCargando(true);
+
+    setTimeout(() => {
     setVistaActual('contacto');
     setProductoSeleccionado(null);
+    setCargando(false);
+    }, 400);
+
   };
 
-  const mostrarDetalle = (producto) => {
+  const mostrarDetalle = async(producto) => {
     setCargando(true);
 
     setTimeout(() => {
@@ -94,22 +100,40 @@ function App() {
   };
 
 
-  const agregarAlCarrito = (producto) => {
+  const agregarAlCarrito = async (producto) => {
+    setCargando(true);
+    setTimeout(() => {
     setCarrito([...carrito, { ...producto, carritoId: Date.now() }]);
     alert(`¡${producto.nombre} agregado al carrito!`);
+    setCargando(false);
+    }, 600);
   };
 
   const eliminarDelCarrito = (carritoId) => {
+    setCargando(true);
+    setTimeout(() => {
     setCarrito(carrito.filter(item => item.carritoId !== carritoId));
+    setCargando(false);
+    }, 600);
   };
 
   const vaciarCarrito = () => {
+    setCargando(true);
+    setTimeout(() => {
     setCarrito([]);
     alert('Carrito vaciado');
+    setCargando(false);
+    }, 400);
+
   };
 
-  const mostrarCarrito = () => {
+  const mostrarCarrito = async() => {
+    setCargando(true);
+
+    setTimeout(() => {
     setVistaActual('carrito');
+    setCargando(false);
+    }, 400);
   };
 
   return (
