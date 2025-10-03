@@ -33,6 +33,7 @@ header {
   order: 2;
   flex: 1;
   justify-content: center;
+  cursor: pointer;
 }
 .logo img {
   height: 30px;
