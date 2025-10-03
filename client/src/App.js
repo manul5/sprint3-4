@@ -35,12 +35,14 @@ function App() {
     fetchProductos();
   }, []);
 
+  
 
-  const handleBuscar = (termino) => {
+  const handleBuscar = async (termino) => {
     setTerminoBusqueda(termino);
-    
+    setCargando(true);
+    setTimeout(()=>{
     if (termino.trim().length >= 3) {
-    const filtrados = productos.filter(producto =>
+    const filtrados =  productos.filter(producto =>
       producto.nombre.toLowerCase().includes(termino.toLowerCase())
     );
 
@@ -50,6 +52,8 @@ function App() {
     } else{
       setProductosFiltrados(productos);
     }
+    setCargando(false);
+  } ,600);
   };
 
   const productosDestacados = productos.filter(p => p.destacado);
