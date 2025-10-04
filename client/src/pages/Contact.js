@@ -12,7 +12,7 @@ const Contact = () => {
       <div id="seccion">
 
         <div id="contacto2">
-          <div id="info">Información de Contacto</div>
+          <h2 className="contact-section-title">Información de Contacto</h2>
           <p>Visítanos en nuestro taller o comunícate con nosotros. Estaremos encantados de atenderte y ayudarte a encontrar el mueble perfecto para tu hogar.</p>
           <div id="container">
 

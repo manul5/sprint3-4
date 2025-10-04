@@ -61,22 +61,6 @@ cd ../client
 npm install
 ```
 
-## ⚙️ Configuración
-
-### Backend
-
-1. Crea un archivo `.env` en la carpeta `/backend` basándote en `.env.example`:
-```bash
-cd backend
-cp .env.example .env
-```
-
-2. Configura las variables de entorno (opcional):
-```env
-PORT=3001
-NODE_ENV=development
-```
-
 ## 🏃 Ejecución del Proyecto
 
 ### Opción 1: Ejecutar ambos servidores simultáneamente (recomendado)

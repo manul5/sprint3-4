@@ -1,21 +1,9 @@
 #form-contacto {
-  background-color: #F5E6D3; 
-  padding: 2rem 1.5rem;
-  border-radius: 1rem;
-  border: 1px solid #d1d5db;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
-  margin-top: 2rem;
-}
-
-#form-contacto #info {
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: #A0522D;
-  margin-bottom: 1rem;
+  height: 100%; /* Asegura que ocupe toda la altura del contenedor padre */
+  padding: 1rem; /* Padding para la vista móvil */
 }
 
 .campo {
@@ -36,9 +24,9 @@
 
 .label-form-contacto {
   font-family: "Inter", sans-serif;
-  font-weight: 500;
-  font-size: 0.95rem;
-  color: #333;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #A0522D;
 }
 
 .label-form-contacto em {
@@ -51,7 +39,7 @@
   padding: 10px 14px;
   border: 1px solid #d1d5db;
   border-radius: 12px;
-  background: #fff;
+  background: #F7F5F3;
   color: #333;
   font-family: "Inter", sans-serif;
   font-size: 0.9rem;
@@ -105,8 +93,8 @@
 /* Tablet */
 @media (min-width: 768px) {
   #form-contacto {
+    padding: 0; /* Quitamos el padding extra en tablet */
     margin: 0;
-    padding: 3rem;
     max-width: none;
   }
 }

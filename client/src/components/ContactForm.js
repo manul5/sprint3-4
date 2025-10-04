@@ -74,7 +74,7 @@ export default function ContactForm() {
 
   return (
     <form id="form-contacto" onSubmit={handleSubmit}>
-      <div id="info">Envíanos un mensaje</div>
+      <h2 className="contact-section-title">Envíanos un mensaje</h2>
 
       {enviado && (
         <div className="alerta-exito">
