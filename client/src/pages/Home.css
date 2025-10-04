@@ -98,6 +98,7 @@
   padding: 1rem 0;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  align-items: stretch; /* Asegura que todos los items tengan la misma altura */
 }
 
 .carrusel::-webkit-scrollbar {
@@ -106,6 +107,7 @@
 
 .carrusel-item {
   flex: 0 0 280px;
+  display: flex; /* Permite que el contenido se estire */
 }
 
 .carrusel-item .card {
@@ -137,11 +139,9 @@
 .carrusel-btn.left {
   left: -20px;
 }
-
 .carrusel-btn.right {
   right: -20px;
 }
-
 
 .porque {
   background-color: #F5E6D3;
@@ -149,12 +149,11 @@
   text-align: center;
 }
 
-.porque .intro {
-  max-width: 700px;
-  margin: 0 auto 3rem;
-  color: #555;
-  font-size: 1rem;
-  line-height: 1.6;
+.porque-titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.5rem, 4vw, 2rem); 
+  color: #A0522D;
+  margin-bottom: 2rem;
 }
 
 .porque-grid {

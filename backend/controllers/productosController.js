@@ -15,13 +15,8 @@ const getProductoById = (req, res) => {
   res.json(producto);
 };
 
-const getProductosDestacados = (req, res) => {
-  const destacados = productos.filter((producto) => producto.destacado === true);
-  res.json(destacados);
-};
 
 module.exports = {
   getProductos,
   getProductoById,
-  getProductosDestacados,
 };

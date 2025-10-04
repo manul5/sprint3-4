@@ -74,7 +74,7 @@ const Home = ({ productosDestacados, cargando, onProductoClick, onVerCatalogo })
 
       
       <section className="porque">
-        <h2>¿Por qué elegirnos?</h2>
+        <h2 className="porque-titulo">¿Por qué elegirnos?</h2>
         <div className="porque-grid">
           <div className="porque-item">
             <h3>Diseño Atemporal</h3>
